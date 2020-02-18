@@ -6,9 +6,9 @@ var costoPerMinorenni = chilometri * costoPerChilometro * 0.8
 var costoPerOver65 = chilometri * costoPerChilometro * 0.6
 
 if (anni < 18) {
-    console.log(costoPerMinorenni);
+    document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoPerMinorenni) + '€');
 } else if (anni > 65) {
-    console.log(costoPerOver65);
+    document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoPerOver65) + '€');
 } else {
-    console.log(costoChilometriTotale)
+    document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoChilometriTotale) + '€');
 }
