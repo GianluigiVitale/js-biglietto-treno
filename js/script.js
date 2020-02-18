@@ -22,7 +22,7 @@ var costoPerOver65 = costoChilometriTotale * 0.6;
 
 if (anni < 18) {
     document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoPerMinorenni) + '€');
-} else if (anni > 65) {
+} else if (anni >= 65) {
     document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoPerOver65) + '€');
 } else {
     document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoChilometriTotale) + '€');
