@@ -13,17 +13,17 @@ km (0.21 € al km), ma va applicato uno sconto del 20% per i minorenni e del 40
     se over 65 costo per over65 altrimenti prezzo normale
 */
 
-var chilometri = prompt('Quanti chilometri vuoi percorrere?');
+var chilometri = prompt('Quanti chilometri vuoi percorrere?');          // definisco diverse variabili: con prompt chiedo i km da percorrere e l'eta', costoPerChilometro, costoChilometriTotale, costoPerMinorenni, costoPerOver65
 var anni = prompt('Quanti anni hai?');
 var costoPerChilometro = 0.21;
 var costoChilometriTotale = chilometri * costoPerChilometro;
 var costoPerMinorenni = costoChilometriTotale * 0.8;
 var costoPerOver65 = costoChilometriTotale * 0.6;
 
-if (anni < 18) {
+if (anni < 18) {    // se la variabile anni e quindi l'eta' e' minore di 18 allora inserisco nell'id 'costobiglietto' il costoPerMinorenni arrotondato per eccesso
     document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoPerMinorenni) + '€');
-} else if (anni >= 65) {
+} else if (anni >= 65) {    // altrimenti se la variabile anni e quindi l'eta' e' maggiore o uguale di 65 inserisco nell'id 'costobiglietto' il costoPerOver65 arrotondato per eccesso
     document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoPerOver65) + '€');
-} else {
+} else {    // altrimenti inserisco nell'id 'costobiglietto' il costoChilometriTotale per eccesso
     document.getElementById('costobiglietto').innerHTML = ('Prezzo: ' + Math.ceil(costoChilometriTotale) + '€');
 }
