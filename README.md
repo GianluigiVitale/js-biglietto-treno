@@ -7,5 +7,5 @@ Using this information the price of the ticket will be calculated as follows: 0.
 ***
 ### Preview:
 km: 100   
-age: 65
+age: 65   
 ![Preview](img/preview.jpg "Preview")
